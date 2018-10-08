@@ -50,7 +50,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'),
                     'proguard-rules/proguard-project.txt',
                     'proguard-rules/okhttp3.pro',
-                    'proguard-rules/okio.pro'
+                    'proguard-rules/okio.pro',
+                    'proguard-rules/workmanager.pro'
         }
     }
 
@@ -126,6 +127,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
+
+    packagingOptions {
+        exclude "META-INF/proguard/androidx-annotations.pro"
+    }
+
 }
 
 tasks.withType(Test) {
@@ -154,6 +160,7 @@ dependencies {
     implementation Libs.snackengagePlayrate
     implementation Libs.emailIntentBuilder
     implementation Libs.tracedroid
+    implementation Libs.workManager
 
     testImplementation Libs.junit
     testImplementation Libs.assertjAndroid

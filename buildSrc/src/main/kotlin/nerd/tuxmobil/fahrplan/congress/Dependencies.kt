@@ -20,6 +20,7 @@ object Versions {
     val testRules = "1.0.2"
     val threeTenBp = "1.3.8"
     val tracedroid = "1.4"
+    val workManager = "1.0.0-alpha09"
 }
 
 object Android {
@@ -54,4 +55,5 @@ object Libs {
     val testRules = "com.android.support.test:rules:${Versions.testRules}"
     val threeTenBp = "org.threeten:threetenbp:${Versions.threeTenBp}"
     val tracedroid = "org.ligi:tracedroid:${Versions.tracedroid}"
+    val workManager = "android.arch.work:work-runtime-ktx:${Versions.workManager}"
 }
