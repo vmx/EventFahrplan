@@ -13,6 +13,7 @@ object Versions {
     val mockito = "2.25.0"
     val mockitoKotlin = "2.1.0"
     val okhttp = "3.12.2"
+    val proguardGradle = "6.0.3"
     val snackengage = "0.19"
     val sonarQubeGradle = "2.7"
     val supportLibrary = "27.1.1"
@@ -31,6 +32,7 @@ object Android {
 object GradlePlugins {
     val androidGradle = "com.android.tools.build:gradle:${Versions.androidGradle}"
     val gradleVersions = "com.github.ben-manes:gradle-versions-plugin:${Versions.gradleVersions}"
+    val proguardGradle = "net.sf.proguard:proguard-gradle:${Versions.proguardGradle}"
     val sonarQubeGradle = "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:${Versions.sonarQubeGradle}"
     val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 }
