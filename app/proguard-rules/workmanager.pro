@@ -27,3 +27,6 @@
 # We reflectively try and instantiate FirebaseJobScheduler when we find a Firebase dependency
 # on the classpath.
 -keep class androidx.work.impl.background.firebase.FirebaseJobScheduler
+
+-dontwarn sun.misc.Unsafe
+
