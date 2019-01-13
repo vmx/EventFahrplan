@@ -20,7 +20,7 @@ object Versions {
     val testRules = "1.0.2"
     val threeTenBp = "1.3.8"
     val tracedroid = "1.4"
-    val workManager = "1.0.0-alpha09"
+    val workManager = "1.0.0-beta01"
 }
 
 object Android {
