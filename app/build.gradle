@@ -67,6 +67,12 @@ android {
             keyAlias props['signing.ccc35c3-release.keyAlias']
             keyPassword props['signing.ccc35c3-release.keyPassword']
         }
+        foss4g2019 {
+            storeFile file(props['signing.foss4g2019-release.keystoreFilePath'])
+            storePassword props['signing.foss4g2019-release.keystorePassword']
+            keyAlias props['signing.foss4g2019-release.keyAlias']
+            keyPassword props['signing.foss4g2019-release.keyPassword']
+        }
     }
 
     def defaultDimension = "default"
@@ -113,6 +119,27 @@ android {
             buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
             buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+35c3@googlemail.com"'
             buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/35C3/public/events/%s/feedback/new"'
+        }
+        foss4g2019 {
+            dimension defaultDimension
+            applicationId "nerd.tuxmobil.fahrplan.camp"
+            signingConfig signingConfigs.foss4g2019
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.2019.foss4g.org/bucharest/schedule/export/schedule.xml"'
+            buildConfigField "String", "EVENT_URL", '"https://talks.2019.foss4g.org/bucharest/talk/%1$s"'
+            buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_FIRST_DAY_START_DAY", "28"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_YEAR", "2019"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_MONTH", "8"
+            buildConfigField "int", "SCHEDULE_LAST_DAY_END_DAY", "30"
+            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
+            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_BETA_TESTING", "false"
+            buildConfigField "boolean", "ENGAGE_GOOGLE_PLAY_RATING", "true"
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"ENTER_EMAIL_ADDRESS_HERE"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+
         }
     }
 
